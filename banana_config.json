@@ -1,24 +1,13 @@
 {
-    "name": "",
-    "category": "",
-    "example_input": {
-        "prompt": "Hello I am a [MASK] model."
-    },
-    "example_output": {
-        "outputs":[
-            {
-                "score":0.13177461922168732,
-                "token":4827,
-                "token_str":"fashion",
-                "sequence":"hello i am a fashion model."
-            },
-            {
-                "score":0.1120428815484047,
-                "token":2535,
-                "token_str":"role",
-                "sequence":"hello i am a role model."
-            }
-        ]
-    },
-    "version": "1"
+  "name": "Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data",
+  "category": "Image Enhancement",
+  "example_input": {
+    "image": "<base64_encoded_image>",
+    "face_enhance": true,
+    "outscale": 4
+  },
+  "example_output": {
+    "output_image": "<base64_encoded_enhanced_image>"
+  },
+  "version": "1"
 }

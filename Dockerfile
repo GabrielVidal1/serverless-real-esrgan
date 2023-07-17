@@ -13,10 +13,12 @@ RUN pip3 install --upgrade pip
 ADD requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
+RUN git clone https://github.com/xinntao/Real-ESRGAN.git realesrgan
+RUN pip3 install -r realesrgan/requirements.txt
+
 # Add your model weight files 
 # (in this case we have a python script)
-ADD download.py .
-RUN python3 download.py
+RUN wget https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth -P realesrgan/weights
 
 ADD . .
 
